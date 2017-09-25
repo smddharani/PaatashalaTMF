@@ -1,0 +1,20 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Change Student</div>
+    </ion-nav-title>
+
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-divider">
+                Current Students
+            </div>
+            <ion-radio ng-model="data.student" ng-change="changeStudent()" class="item item-avatar item-text-wrap" ng-repeat="s in currentStudents" ng-value="s.Id">
+                <img src="images/babyphoto.jpg">
+                <h2><b>{{s.Name}}</b> ({{s.Sex}})</h2>
+                <span>Father: <b>{{s.FatherName}}</b></span>
+            </ion-radio>
+        </div>
+    </ion-content>
+</ion-view>

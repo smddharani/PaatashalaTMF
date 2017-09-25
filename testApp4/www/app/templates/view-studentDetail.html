@@ -1,0 +1,52 @@
+﻿<ion-view>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title"><strong> Student Details </strong></h1>
+    </div>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Personal Details</div>
+    </ion-nav-title>
+
+    <ion-content>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="{{imageUrl}}" onerror="this.src='student.png';" />
+                <h2>Name : <b>{{PersonalDetail.Details.Name}}</b></h2>
+                <p>Reg No: <b>{{PersonalDetail.Details.RegistrationCode}}</b></p>
+            </div>
+
+            <div class="item item-image">
+                <img src="{{imageUrl}}" onerror="this.src = 'student.png';" />
+            </div>
+
+            <a class="item">
+                <div class="row">
+                    <div class="col col-33" style="text-align:right">
+                        School Name
+                    </div>
+                    <div class="col col-66">
+                        <b>{{PersonalDetail.Details.OrgName}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-33" style="text-align:right">
+                        Batch
+                    </div>
+                    <div class="col col-66">
+                        <b> {{PersonalDetail.Details.Batch}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-33" style="text-align:right">
+                        Course
+                    </div>
+                    <div class="col col-66">
+                        <b> {{PersonalDetail.Details.Course}}</b>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

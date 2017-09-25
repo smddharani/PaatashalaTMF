@@ -1,0 +1,55 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Student</div>
+    </ion-nav-title>
+    <ion-content>
+        <!--<div class="list"></div>-->
+        <div class="item">
+            <div class="list">
+                <div class="item item-divider">
+                    Current Students
+                </div>
+                <div class="item item-avatar item-text-wrap item-button-right" ng-repeat="s in currentStudents">
+                    <img src="images/babyphoto.jpg">
+                    <h2><b>{{s.Name}}</b> ({{s.Sex}})</h2>
+                    <span>Father: <b>{{s.FatherName}}</b></span>
+                    <!--<button class="button button-assertive" ng-click="deleteStudent(s)">
+                        <i class="icon ion-android-delete"></i>
+                    </button>-->
+                </div>
+            </div>
+        </div>
+        
+                
+            
+            <!--<div class="item">
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Course
+                        </div>
+                        <select ng-options="c.Id as c.Name for c in courses" ng-model="data.courseId" ng-change="getStudents()"></select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Batch
+                        </div>
+                        <select ng-options="b.Id as b.Name for b in batches" ng-model="data.batchId" ng-change="getStudents()"></select>
+                    </label>
+                </div>
+                <div class="list">
+                    <div class="item item-divider">
+                        Children result
+                    </div>
+                    <ion-checkbox ng-model="s.selected" ng-repeat="s in students">
+                        <h2><b>{{s.Name}}</b> ({{s.Sex}})</h2>
+                        <span>Father: <b>{{s.FatherName}}</b></span>
+                    </ion-checkbox>
+                </div>
+                <button class="button button-block button-positive" ng-click="addSelectedStudents()">Add Selected Children</button>
+            </div>-->
+        
+    </ion-content>
+</ion-view>

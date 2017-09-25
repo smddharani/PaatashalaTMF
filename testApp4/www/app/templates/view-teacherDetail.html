@@ -1,0 +1,29 @@
+﻿<ion-view>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title"><strong> Teacher Details </strong></h1>
+    </div>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Teachers Details</div>
+    </ion-nav-title>
+
+    <ion-content class="padding">
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th class="text-left">Subject</th>
+                    <th class="text-left">Faculty</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <tr ng-repeat="s in TeacherDetail.FacultyList">
+                    <td class="text-left">{{ s.SubjectName}}</td>
+                    <td class="text-left">{{s.EmployeeName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ion-content>
+</ion-view>
+<link href="../../css/custom-table.css" rel="stylesheet" />

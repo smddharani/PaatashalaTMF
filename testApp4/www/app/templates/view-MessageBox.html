@@ -1,0 +1,40 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Message Box</div>
+    </ion-nav-title>
+
+    <div class="bar bar-header bar-positive">
+        <h1 class="title"><strong> Message Box</strong></h1>
+    </div>
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()">
+            Pull to refresh
+        </ion-refresher>
+        <ion-spinner icon="bubbles" class="spinner-balanced"></ion-spinner>
+        <div class="list">
+            <a class="item item-icon-left item-text-wrap" ng-click="showMessage(s)" ng-repeat="s in MessageContents">
+                <i class="icon ion-android-mail" ng-class="{'ion-arrow-swap': (!!s.Type && s.Type != 'NONE') ,'ion-android-mail': (!s.Type || s.Type == 'NONE') }"></i>
+                <span ng-class="{'new-message': !s.Response && (!!s.Type && s.Type != 'NONE')}">{{s.Contents}}</span>
+                <p>
+                    <span style="color:red;">{{ (!s.Response && (!!s.Type && s.Type != 'NONE')) ? '(New)' : '.'}}</span>
+                    <span class="item-note">
+                        {{s.CreatedOn}}
+                    </span>
+                </p>
+            </a>
+            <a class="item item-icon-left item-text-wrap" ng-hide="data.hide" ng-click="loadMessages()" style="text-align: center;">
+                <span>Load older messages</span>
+            </a>
+            <div class="item item-icon-left item-text-wrap" ng-show="data.hide" style="text-align: center;">
+                <span>End of messages</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<!--<link href="../../css/custom-table.css" rel="stylesheet" />-->
+<style>
+    .new-message {
+        font-weight:bold;
+    }
+</style>

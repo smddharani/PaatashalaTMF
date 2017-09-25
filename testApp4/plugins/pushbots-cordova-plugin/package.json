@@ -1,0 +1,127 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "pushbots-cordova-plugin@1.4.3",
+        "scope": null,
+        "escapedName": "pushbots-cordova-plugin",
+        "name": "pushbots-cordova-plugin",
+        "rawSpec": "1.4.3",
+        "spec": "1.4.3",
+        "type": "version"
+      },
+      "E:\\RajeshKN\\Cordova\\09-09-2017\\testApp4\\node_modules"
+    ]
+  ],
+  "_from": "pushbots-cordova-plugin@1.4.3",
+  "_id": "pushbots-cordova-plugin@1.4.3",
+  "_inCache": true,
+  "_location": "/pushbots-cordova-plugin",
+  "_nodeVersion": "4.6.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/pushbots-cordova-plugin-1.4.3.tgz_1484773440422_0.18804056104272604"
+  },
+  "_npmUser": {
+    "name": "pushbots",
+    "email": "info@pushbots.com"
+  },
+  "_npmVersion": "2.15.11",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "pushbots-cordova-plugin@1.4.3",
+    "scope": null,
+    "escapedName": "pushbots-cordova-plugin",
+    "name": "pushbots-cordova-plugin",
+    "rawSpec": "1.4.3",
+    "spec": "1.4.3",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pushbots-cordova-plugin/-/pushbots-cordova-plugin-1.4.3.tgz",
+  "_shasum": "9c7d8017259dccacbc9c914fc24c3bfbdacd1c34",
+  "_shrinkwrap": null,
+  "_spec": "pushbots-cordova-plugin@1.4.3",
+  "_where": "E:\\RajeshKN\\Cordova\\09-09-2017\\testApp4\\node_modules",
+  "author": {
+    "name": "Pushbots"
+  },
+  "bugs": {
+    "url": "https://github.com/pushbots/phonegap/issues"
+  },
+  "cordova": {
+    "id": "pushbots-cordova-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "PushBots plugin for phonegap/Cordova.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "9c7d8017259dccacbc9c914fc24c3bfbdacd1c34",
+    "tarball": "https://registry.npmjs.org/pushbots-cordova-plugin/-/pushbots-cordova-plugin-1.4.3.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.6.3"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=5.2.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.1.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=7.0.0"
+    },
+    {
+      "name": "apple-xcode",
+      "version": ">=7.0.0"
+    }
+  ],
+  "gitHead": "275a14c17550341aa41d8b2b351da5342606edb4",
+  "homepage": "https://github.com/pushbots/phonegap#readme",
+  "keywords": [
+    "push",
+    "notifications",
+    "pushnotifications",
+    "free push notifications",
+    "GCM",
+    "C2DM",
+    "Android push notifications",
+    "helium",
+    "APNS",
+    "Push Bots",
+    "PushBots",
+    "phonegap",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "pushbots",
+      "email": "info@pushbots.com"
+    }
+  ],
+  "name": "pushbots-cordova-plugin",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushbots/phonegap.git"
+  },
+  "scripts": {},
+  "version": "1.4.3"
+}

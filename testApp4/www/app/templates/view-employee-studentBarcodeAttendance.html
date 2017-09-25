@@ -1,0 +1,40 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Student Attendance</div>
+    </ion-nav-title>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title"><strong> BarCode Scanner </strong></h1>
+    </div>
+    <ion-content class="padding">
+        <form name="BarCodeForm">
+            <button class="button button-block button-positive" ng-click="scanBarCode()">
+                Scan Student ID
+            </button>
+            <div class="card">
+                <div class="item item-divider">
+                    Scanned Students
+                </div>
+                <div class="list list-inset">
+                    <div class="item" ng-repeat="ss in scannedStudents.Name">
+                        {{ss}}
+                        <button style="float:right" class="button button-small button-assertive  pull-right" ng-click="DeleteCurrentRow($index)">Delete</button>
+
+                    </div>
+                    <div class="item" ng-show="scannedStudents.Id.length == 0">
+                        No students scanned yet
+                    </div>
+                </div>
+
+            </div>
+            <ion-list>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="true">Check-In</ion-radio>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="false" ng-required="!(data.choice)">Check-Out</ion-radio>
+            </ion-list>
+            <button class="button button-block button-positive" ng-disabled="data.choice == undefined || scannedStudents.Name.length == 0" ng-click="sendStudentsTimings()">
+                Save Attendance
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

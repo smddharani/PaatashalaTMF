@@ -1,0 +1,65 @@
+﻿<ion-view hide-nav-bar="true">
+    <link href="css/login.css" rel="stylesheet" />
+    <ion-content class="padding bk">
+        <div class="logo-container">
+            <img src="Paatashala.png" style="width:60%;z-index:10;" />
+        </div>
+        <div class="l-container" ng-init="loginData.Usertype='Parent'">
+            <div class="row l-row">
+                <div class="col l-header parent-header" ng-click="loginData.Usertype='Parent'" ng-class="{'notactive': loginData.Usertype != 'Parent' }">
+                    Parent
+                </div>
+                <div class="col l-header emp-header" ng-click="loginData.Usertype='Employee'" ng-class="{'notactive': loginData.Usertype == 'Parent' }">
+                    Employee
+                </div>
+            </div>
+            <div class="row l-row" ng-show="loginData.Usertype == 'Parent'">
+                <div class="col l-form">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <input ng-model="loginData.Username" type="text" placeholder="Email">
+                        </label>
+                        <label class="item item-input">
+                            <input ng-model="loginData.Password" type="password" placeholder="Password">
+                        </label>
+                    </div>
+                    <button class="l-button" ng-click="login()">
+                        Login
+                    </button>
+                    <button class="l-button secondary" ng-click="newUser()">
+                        Sign Up
+                    </button>
+                    <button class="l-button secondary full" ng-click="forgetPassword()">
+                        Forgot Password
+                    </button>
+                </div>
+            </div>
+            <div class="row l-row" ng-hide="loginData.Usertype == 'Parent'">
+                <div class="col l-form">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <input ng-model="loginData.Username" type="text" placeholder="Email">
+                        </label>
+                        <label class="item item-input">
+                            <input ng-model="loginData.Password" type="password" placeholder="Password">
+                        </label>
+                        <label class="item item-input">
+                            <input ng-model="loginData.OrgName" type="text" placeholder="Organisation Name">
+                        </label>
+                    </div>
+                    <button class="l-button" ng-click="login()">
+                        Login
+                    </button>
+                    <button class="l-button secondary full" ng-click="EmployeeForgetPassword()">
+                        Forgot Password
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-logo-container">
+            <h4>Powered by</h4>
+            <img src="ssg-logo.png" />
+        </div>
+    </ion-content>
+   
+</ion-view>

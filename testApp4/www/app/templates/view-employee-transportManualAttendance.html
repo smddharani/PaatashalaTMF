@@ -1,0 +1,39 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Transport Attendance</div>
+    </ion-nav-title>
+    <ion-content>
+        <form name="transportFrom">
+            <ion-item>
+                <label class="item item-input">
+                    <input type="text" ng-model="FormattedDate" placeholder="Date" ng-click="setDateTime()">
+                </label>
+            </ion-item>
+
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Batch
+                </label>
+                <select ng-model="selected.Batch" ng-options="r.Id as r.Name for r in Batchlist"></select>
+            </label>
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Course
+                </label>
+                <select ng-model="selected.Course" ng-options="r.Id as r.Name for r in CourseList"></select>
+            </label>
+            <br />
+            <ion-list>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="true">Pick Up</ion-radio>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="false" ng-required="!(data.choice)">Drop</ion-radio>
+                <span style="color:red" ng-show="transportFrom.PickDropRadio.$error.required">You have to choose pick up or drop</span>
+            </ion-list>
+            <br />
+            <br />
+            <button class="button button-block button-positive" ng-disabled="transportForm.$invalid" ng-click="GiveTransportManualAttendanceList(data)">
+                Next
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

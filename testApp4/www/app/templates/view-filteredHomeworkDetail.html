@@ -1,0 +1,22 @@
+﻿<ion-view>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ></a>
+        <h1 class="title">Home Work</h1>
+      </div>
+    <ion-content style="margin-top: 44px;   margin-bottom: 48px;">
+        <div style="margin-top: 8px;margin-left:5px; ">
+            <div class="row">
+                <div class="col" style="font-size:20px;width: 5px;">Assignment  Name</div>
+                <div class="col" style="font-size:20px;width: 5px;">SubjectName</div>
+                <div class="col" style="font-size:20px;">Question</div>
+            </div>
+            <div class="row" ng-repeat="s in Hwork.assignmentsList">
+                <div class="col" style="padding-right:4px;">{{s.AssignmentName}}</div>
+                <div class="col" style="padding-right:4px;">{{s.SubjectName}}</div>
+                <div class="col" style="padding-right:4px;">{{s.Question}}</div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

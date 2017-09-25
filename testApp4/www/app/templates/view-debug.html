@@ -1,0 +1,16 @@
+﻿<ion-view>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title"><strong> Debug </strong></h1>
+    </div>
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                Local Storage
+            </div>
+            <a class="item item-text-wrap" ng-repeat="li in localstorageItems">
+                <b>{{li.Key}}</b>: {{li.Value}}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

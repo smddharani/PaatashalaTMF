@@ -1,0 +1,69 @@
+{
+    "name": "testApp4",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "cordova-plugin-app-version": "https://github.com/whiteoctober/cordova-plugin-app-version.git",
+        "cordova-plugin-camera": "2.1.1",
+        "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-console": "1.0.5",
+        "cordova-plugin-datepicker": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker",
+        "cordova-plugin-dialogs": "1.2.1",
+        "cordova-plugin-file": "4.3.0",
+        "cordova-plugin-firebase": "0.1.21",
+        "cordova-plugin-geolocation": "2.1.0",
+        "cordova-plugin-inappbrowser": "1.2.1",
+        "cordova-plugin-mauron85-background-geolocation": "2.2.5",
+        "cordova-plugin-media-capture": "1.2.0",
+        "cordova-plugin-ms-adal": "0.9.0",
+        "cordova-plugin-network-information": "1.2.1",
+        "cordova-plugin-whitelist": "1",
+        "phonegap-plugin-barcodescanner": "https://github.com/phonegap/phonegap-plugin-barcodescanner.git",
+        "pushbots-cordova-plugin": "1.4.3",
+        "cordova-plugin-file-transfer": "1.6.3",
+        "com-sarriaroman-photoviewer": "1.1.10",
+        "cordova-background-geolocation-lt": "2.7.6",
+        "cordova-plugin-background-fetch": "4.0.4",
+        "cordova-plugin-datetimepicker": "1.0.0",
+        "cordova-plugin-imagepicker": "1.1.0",
+        "cordova-plugin-x-toast": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin",
+        "es.keensoft.fullscreenimage": "1.0.1"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-app-version": {},
+            "cordova-plugin-camera": {},
+            "cordova-plugin-compat": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-datepicker": {},
+            "cordova-plugin-dialogs": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-firebase": {},
+            "cordova-plugin-geolocation": {},
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-mauron85-background-geolocation": {
+                "ACCOUNT_TYPE": "Developer",
+                "CONTENT_AUTHORITY": "SSG",
+                "ALWAYS_USAGE_DESCRIPTION": "Testing"
+            },
+            "cordova-plugin-media-capture": {},
+            "cordova-plugin-ms-adal": {},
+            "cordova-plugin-network-information": {},
+            "cordova-plugin-whitelist": {},
+            "phonegap-plugin-barcodescanner": {},
+            "pushbots-cordova-plugin": {},
+            "cordova-plugin-file-transfer": {},
+            "com-sarriaroman-photoviewer": {},
+            "cordova-background-geolocation-lt": {
+                "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Background location-tracking is required",
+                "LOCATION_WHEN_IN_USE_USAGE_DESCRIPTION": "Background location-tracking is required",
+                "MOTION_USAGE_DESCRIPTION": "Using the accelerometer increases battery-efficiency"
+            },
+            "cordova-plugin-background-fetch": {},
+            "cordova-plugin-datetimepicker": {},
+            "cordova-plugin-imagepicker": {},
+            "cordova-plugin-x-toast": {},
+            "es.keensoft.fullscreenimage": {}
+        }
+    }
+}

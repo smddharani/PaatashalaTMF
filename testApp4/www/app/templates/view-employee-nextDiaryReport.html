@@ -1,0 +1,82 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Diary Report</div>
+    </ion-nav-title>
+    <ion-content class="padding">
+       
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" ng-model="data.searchText" ng-change="searchTextChanged()" placeholder="Search">
+        </label>
+        <div class="list">
+            <!--<select ng-model="SelectedVal" ng-change="dropvalueChange()" ng-options="u.Id as u.Name u in dropdownValues"></select>-->
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Send To
+                </div>
+                <select ng-model="dropdown.value" ng-change="dropvalueChange()" ng-init="dropdown.value='-1'">
+                    <option value="-1" selected></option>
+                    <option value="1">All</option>
+                    <option value="0">None</option>
+                </select>
+            </label>
+        </div>
+        <br />
+
+        <ul class="list" collection-repeat="i in StudentsList">
+            <!--<ul class="list" ng-repeat="i in StudentsList">-->
+            <li class="item item-toggle">
+                {{i.StudentName}}
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="i.isPresent">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+        <ion-item>
+            <p> <strong>Diary Title</strong></p>
+            <div>
+                <label class="item item-input">
+                    <textarea ng-model="comments.DiaryTitle"></textarea>
+                </label>
+            </div>
+            <p> <strong>Diary Note</strong></p>
+            <div>
+                <label class="item item-input">
+                    <textarea ng-model="comments.DiaryNote"></textarea>
+                </label>
+            </div>
+        </ion-item>
+        <!--</ion-item>-->
+        <button class="button button-block button-positive" ng-click="SubmittingDairy()">
+            Submit
+        </button>
+    </ion-content>
+</ion-view>
+<!--<style type="text/css">
+    .item-toggle {
+        width: 100%;
+        top: 5px;
+        left: 5px;
+        right:5px;
+    }
+
+    .item item-input {
+        width: 100%;
+    }
+
+    .item item-input {
+        top: -15px;
+        width: 90%;
+        left: -14px;
+    }
+</style>
+<button [color]="mycolor">Test</button>
+<style>
+.icon {
+   font-size:20px;
+}
+</style>-->

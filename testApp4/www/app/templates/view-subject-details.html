@@ -1,0 +1,29 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Subject Details</div>
+    </ion-nav-title>
+
+    <ion-content class="padding">
+        <div class="card" ng-if="SubjectDetail.subjectsList.length == 0">
+            <div class="item item-text-wrap" style="text-align:center">
+                Subjects detail not available
+            </div>
+        </div>
+        <table class="table-fill" ng-if="SubjectDetail.subjectsList != undefined &&  SubjectDetail.subjectsList.length != 0">
+            <thead>
+                <tr>
+                    <th class="text-left">Subject</th>
+                    <th class="text-left">Faculty</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <tr ng-repeat="s in SubjectDetail.subjectsList">
+                    <td class="text-left">{{s.SubjectName}}</td>
+                    <td class="text-left">{{s.EmployeeName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ion-content>
+</ion-view>
+<link href="../../css/custom-table.css" rel="stylesheet" />

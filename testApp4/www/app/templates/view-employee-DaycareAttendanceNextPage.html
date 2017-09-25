@@ -1,0 +1,44 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Daycare Attendance</div>
+    </ion-nav-title>
+    <ion-content class="padding">
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" ng-model="data.searchText" ng-change="searchTextChanged()" placeholder="Search">
+        </label>
+        <div class="list">
+            <div class="item item-divider">
+                Student Name
+                <span class="item-note">
+                    Check In &nbsp; Check Out
+                </span>
+            </div>
+            <div class="item item-text-wrap" collection-repeat="i in StudentsList">
+                {{i.StudentName}}
+                <span class="item-note">
+                    <button class="button button-small" 
+                            ng-class="{'button-positive': i.CheckInTime != 'NOT SET', 'button-stable': i.CheckInTime != 'NOT SET' }" 
+                            ng-click="getCheckInTime(i)">
+                        {{i.CheckInTime}}
+                    </button>
+                    <button class="button button-small" 
+                            ng-class="{'button-positive': i.CheckOutTime != 'NOT SET', 'button-stable': i.CheckOutTime != 'NOT SET' }" 
+                            ng-click="getCheckOutTime(i)">
+                        {{i.CheckOutTime}}
+                    </button>
+                </span>
+            </div>
+        </div>
+        <button class="button button-block button-positive" ng-click="SaveAttendance()">
+            Save Attendance
+        </button>
+        <br/>
+    </ion-content>
+</ion-view>
+<style>
+    .button-small{
+        width:51pt;
+    }
+</style>

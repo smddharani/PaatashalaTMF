@@ -1,0 +1,215 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-camera@~2.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-media-capture": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-media-capture@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-network-information@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phonegap/phonegap-plugin-barcodescanner.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-datepicker": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-app-version": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/whiteoctober/cordova-plugin-app-version.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-ms-adal": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-ms-adal@0.9.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-mauron85-background-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-mauron85-background-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {
+            "ACCOUNT_TYPE": "Developer",
+            "CONTENT_AUTHORITY": "SSG",
+            "ALWAYS_USAGE_DESCRIPTION": "Testing"
+        }
+    },
+    "cordova-plugin-imagepicker": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-imagepicker@1.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file-transfer": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file-transfer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "es.keensoft.fullscreenimage": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/keensoft/FullScreenImage-Cordova-Plugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com-sarriaroman-photoviewer": {
+        "source": {
+            "type": "registry",
+            "id": "com-sarriaroman-photoviewer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-background-geolocation-lt": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-background-geolocation-lt"
+        },
+        "is_top_level": true,
+        "variables": {
+            "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Background",
+            "LOCATION_WHEN_IN_USE_USAGE_DESCRIPTION": "Background",
+            "MOTION_USAGE_DESCRIPTION": "Using",
+            "LICENSE": "4bbb513c013111eae951647fd4f9e79f127fce6f7a00e9d327db9ea2a053a0df"
+        }
+    },
+    "cordova-plugin-background-fetch": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-background-fetch"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-datetimepicker": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-datetimepicker"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation@2.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pushbots-cordova-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "pushbots-cordova-plugin@1.4.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-x-toast": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-x-toast"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-firebase": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-firebase"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

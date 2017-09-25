@@ -1,0 +1,37 @@
+﻿
+<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Daycare Attendance</div>
+    </ion-nav-title>
+    <ion-content class="padding">
+        <form name="Form">
+            <label class="item item-input">
+                <input type="text" ng-model="FormattedDate" placeholder="Date" ng-click="setDateTime()">
+            </label>
+
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Batch
+                </label>
+                <select ng-model="selected.Batch" ng-options="r.Id as r.Name for r in Batchlist"></select>
+            </label>
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Course
+                </label>
+                <select ng-model="selected.Course" ng-options="r.Id as r.Name for r in CourseList"></select>
+            </label>
+            <br />
+            <!--<ion-list>
+                <ion-radio ng-model="selected.choice" name="PickDropRadio" ng-value="true">Check-In</ion-radio>
+                <ion-radio ng-model="selected.choice" name="PickDropRadio" ng-value="false" ng-required="!(selected.choice)">Check-Out</ion-radio>
+                <span style="color:red" ng-show="Form.PickDropRadio.$error.$dirty && Form.PickDropRadio.$error.required">You have to choose pick up or drop</span>
+            </ion-list>-->
+            <br />
+            <button class="button button-block button-positive" ng-disabled="!selected.Batch || !selected.Course" ng-click="GiveAttendanceList()">
+                Take Attendance
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

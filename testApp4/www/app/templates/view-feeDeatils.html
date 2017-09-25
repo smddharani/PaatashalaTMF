@@ -1,0 +1,38 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Fee Details[{{student.Name}}]</div>
+    </ion-nav-title>
+    <ion-content>
+        <div class="card" ng-repeat="f in feeDetails.feeDetails">
+            <div class="item item-text-wrap">
+                <p>Paid Date : <b>{{f.DatePaid}}</b></p>
+                <p>Grand Total :<b> &#8377; {{f.GrandTotal}}</b></p>
+                <p>Amount Paid :<b> &#8377; {{f.AmountPaid}}</b></p> 
+                <p>Period :<b> {{f.PaidForPeriod}}</b></p>
+                <p>Payment Mode :<b> {{f.PaymentMode}}</b></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    .rwd-table {
+        background: #34495E;
+        color: #fff;
+        border-radius: .4em;
+        overflow: hidden;
+    }
+
+        .rwd-table tr {
+            border-color: gold;
+        }
+
+        .rwd-table th, td {
+            margin: .5em 1em;
+        }
+
+            .rwd-table th, td:before {
+                color: #dd5;
+            }
+</style>

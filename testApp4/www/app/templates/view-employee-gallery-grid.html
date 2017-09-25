@@ -1,0 +1,37 @@
+﻿
+<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Gallery</div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-show="selectionEnable" class="button button-icon icon ion-android-checkbox-outline-blank" ng-click="deselectAll()"></button>
+        <button ng-show="selectionEnable" class="button button-icon icon ion-android-checkbox-outline" ng-click="selectAll()"></button>
+        <button ng-show="selectionEnable" class="button button-icon icon ion-android-delete" ng-click="deleteSelected()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="card" ng-if="grid.length == 0" style="text-align: center;font-style: italic;">
+            <div class="item item-text-wrap">
+                No Images to display
+            </div>
+        </div>
+
+        <div ng-click="showImage(row)" on-hold="onHold(row)" class="square" ng-repeat="row in grid" style="background-image: url('{{row.url}}')">
+            <img ng-show="row.selected" style="position: absolute;width: 50%;left: 25%;top: 25%;" src="tick.png" />
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    .square {
+        float: left;
+        position: relative;
+        width: 31.34%;
+        padding-bottom: 30%;
+        margin: 1%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: #c1c1c1 2px 2px 6px;
+        border-radius: 1%;
+    }
+</style>

@@ -1,0 +1,59 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Transport Attendance</div>
+    </ion-nav-title>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title"><strong> BarCode Scanner </strong></h1>
+    </div>
+    <ion-content class="padding" style="margin-top: 52px;">
+        <form name="BarCodeForm">
+            <!--<button id="scan" ng-click="scanBarCode()" style="width:100px; height: 30px;">Scan</button>
+            <button id="scan" ng-click="add()" style="width:100px; height: 30px;">Add</button>-->
+            <button class="button button-block button-positive" ng-click="scanBarCode()">
+                Scan
+            </button>
+            <div class="card">
+                <div class="item item-divider">
+                    Scanned Students
+                </div>
+                <div class="list list-inset">
+                    <div class="item" ng-repeat="ss in scannedStudents.Name">
+                        {{ss}}
+                        <button style="float:right" class="button button-small button-assertive  pull-right" ng-click="DeleteCurrentRow($index)">Delete</button>
+
+                    </div>
+                    <div class="item" ng-show="scannedStudents.Id.length == 0">
+                        No students scanned yet
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-bar" ng-init="data.postion = 'School'">
+                <a class="button"
+                   ng-class="{'button-positive': data.postion == 'School' }"
+                   ng-click="data.postion='School'">School</a>
+                <a class="button"
+                   ng-class="{'button-positive': data.postion == 'Home' }"
+                   ng-click="data.postion='Home'">Home</a>
+            </div>
+
+            <ion-list>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="true" style="margin-top: 14px;">Pick Up</ion-radio>
+                <ion-radio ng-model="data.choice" name="PickDropRadio" ng-value="false" ng-required="!(data.choice)">Drop</ion-radio>
+                <span style="color:red" ng-show="BarCodeForm.PickDropRadio.$error.required">You have to choose pick up or drop</span>
+            </ion-list>
+
+            <!--<label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    RouteCode
+                </label>
+                <select ng-model="selected.Route" ng-options="r.Id as r.RouteCode for r in RouteCode.Routes"></select>
+            </label>-->
+            <button class="button button-block button-positive" ng-disabled="BarCodeForm.$invalid" ng-click="sendStudentsTimings()">
+                Submit Student List
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

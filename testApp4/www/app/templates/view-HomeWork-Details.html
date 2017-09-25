@@ -1,0 +1,55 @@
+﻿<ion-view>
+    <div class="bar bar-header bar-positive">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/templates/view-parent-home.html"></a>
+        <h1 class="title">Home Work</h1>
+        <button class="button ion-android-more-vertical" style="margin-left: 281px;" ng-click="showPopUp()"></button>
+    </div>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">  Homework Details</div>
+    </ion-nav-title>
+    <!--<ion-content style="margin-top: 44px;   margin-bottom: 48px;">
+        <div style="margin-top: 8px;margin-left:5px; ">
+            <div class="row">
+                <div class="col" style="font-size:20px;width: 5px;">Assignment  Name</div>
+                <div class="col" style="font-size:20px;width: 5px;">SubjectName</div>
+                <div class="col" style="font-size:20px;width: 5px;">Date</div>
+                <div class="col" style="font-size:20px;">Question</div>
+            </div>
+            <div class="row" ng-repeat="s in HomeworkDetail.assignmentsList">
+                <div class="col" style="padding-right:4px;">  {{s.AssignmentName}}</div> 
+                <div class="col" style="padding-right:4px;">  {{s.SubjectName}}</div> 
+                <div class="col" style="padding-right:4px;">  {{s.Date | date: "yyyy-MM-dd"}}</div>
+                <div class="col" style="padding-right:4px;">  {{s.Question}}</div>
+            </div>
+        </div>
+    </ion-content>-->
+    <ion-content>
+        <ion-item>
+            <ion-label>Get Particular Day Homework</ion-label>
+            <label class="item item-input">
+                <input type="text" ng-model="FormattedDate" placeholder="Date" ng-click="setDateTime()">
+            </label>
+            <button class="button button-block button-positive" ng-click="getHomework()">
+                Get Homework
+            </button>
+        </ion-item>
+        <div class="card" ng-if="HomeworkDetail.assignmentsList.length == 0">
+            <div class="item item-text-wrap" style="text-align:center">
+                Homework Not assigned today
+            </div>
+        </div>
+        <div class="card" ng-repeat="s in HomeworkDetail.assignmentsList">
+            <div class="item item-text-wrap">
+                <p>Subject: {{s.SubjectName}}</p>
+                <p>Assignment Name: {{s.AssignmentName}}</p>
+                <p>Date: {{s.Date | date: "yyyy-MM-dd"}}</p>
+                <p>Questions: </p>
+                <p ng-repeat="q in s.MultipleQuestion">
+                    <b>{{$index+1}}.</b>
+                     <b>{{q.QuestionsName}}</b>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

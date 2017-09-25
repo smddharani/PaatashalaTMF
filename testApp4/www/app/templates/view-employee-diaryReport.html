@@ -1,0 +1,36 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Diary Report</div>
+    </ion-nav-title>
+    <ion-content>
+        <form name="DiaryReport" novalidate>
+            <ion-item>
+                <label class="item item-input">
+                    <span> <label>Date : &nbsp;</label>  </span>
+                    <input type="text" ng-model="FormattedDate" placeholder="Date" ng-click="setDateTime()">
+                </label>
+            </ion-item>
+
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Batch
+                    <span ng-show="DiaryReport.batch.$error.required" style="color:red">*</span>
+                </label>
+                <select name="batch" ng-model="selected.Batch" ng-options="r.Id as r.Name for r in Batchlist" required></select>
+            </label>
+            <label class="item item-input item-select" style="margin-top: 14px;">
+                <label class="input-label">
+                    Course
+                    <span ng-show="DiaryReport.course.$error.required" style="color:red">*</span>
+                </label>
+                <select name="course" ng-model="selected.Course" ng-options="r.Id as r.Name for r in CourseList" required></select>
+            </label>
+            <br />
+            <br />
+            <button class="button button-block button-positive" ng-disabled="DiaryReport.$invalid" ng-click="GiveStudentsList()">
+                Next
+            </button>
+            </form>
+</ion-content>
+</ion-view>

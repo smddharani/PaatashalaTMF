@@ -1,0 +1,67 @@
+﻿<ion-content>
+    <ion-list>
+        <div class="list" style="background-image:url(../../images/backgroundImg2.jpg)">
+            <label class="item item-input" style="background-color:blue; color:white;">Register As :</label>
+          
+            <form name="studentform" novalidate>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        School
+                    </div>
+                    <select ng-model="student.school" ng-options="v.Id as v.OrgName group by v.group for v in SchoolList" ng-change="getCourse(student)">
+
+                        <option></option>
+                    </select>
+                </label>
+
+                <label class="item item-input">
+                    <input name="firstname" type="text" placeholder="First Name" ng-model="firstname" required>
+                    <span style="color:red;" ng-show="studentform.firstname.$dirty && studentform.firstname.$invalid">
+                        <span ng-show="studentform.firstname.$error.required">First Name is required</span>
+                    </span>
+                </label>
+
+                <label class="item item-input">
+                    <input name="lastname" type="text" placeholder="Last Name" ng-model="lastname" required>
+                    <span style="color:red;" ng-show="studentform.lastname.$dirty && studentform.lastname.$invalid">
+                        <span ng-show="studentform.lastname.$error.required">Last Name is required</span>
+                    </span>
+                </label>
+                <label class="item item-input">
+                    <input name="email" type="email" placeholder="Email" ng-model="email" required>
+                    <span style="color:red;" ng-show="studentform.email.$dirty && studentform.email.$invalid  ">
+                        <span ng-show="studentform.email.$error.required">Email id is required</span>
+                        <span ng-show="studentform.email.$error.invalid">Email Id is Invalid</span>
+                    </span>
+                </label>
+                <label class="item item-input">
+                    <input name="phone" type="text" placeholder="phone number" ng-model="phone" maxlength="10" required>
+                    <span style="color:red;" ng-show="studentform.phone.$dirty && studentform.phone.$invalid ">
+                        <span ng-show="studentform.phone.$error.required">Phone number is required</span>
+                    </span>
+                </label>
+                <label class="item item-input">
+                    <input type="password" name="Pwd" placeholder="Password" ng-model="Pwd" required>
+                    <span style="color:red;" ng-show="studentform.Pwd.$dirty && studentform.Pwd.$invalid ">
+                        <span ng-show="studentform.Pwd.$error.required">Password is required</span>
+                    </span>
+                </label>
+                <label class="item item-input">
+
+                    <input type="password" name="confirmPwd" placeholder="Confirm Password" ng-model="confirmPwd" required>
+                    <span style="color:red;" ng-show="studentform.confirmPwd.$dirty && studentform.confirmPwd.$invalid ">
+                        <span ng-show="studentform.confirmPwd.$error.required">Confirm Password is required</span>
+                    </span>
+                </label>
+              
+              
+               
+                
+                <button class="button button-block button-positive" style="width: 187px;border-radius: 15px;position: relative;left: 80px;top: 39px;" ng-disabled="studentform.firstname.$dirty && studentform.firstname.$invalid ||studentform.lastname.$dirty && studentform.lastname.$invalid || studentform.email.$dirty && studentform.email.$invalid || studentform.phone.$dirty && studentform.phone.$invalid  "
+                        ng-click="register()">
+                    Register
+                </button>
+            </form>
+        </div>
+    </ion-list>
+</ion-content>

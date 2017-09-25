@@ -1,0 +1,58 @@
+﻿<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view animation="slide-right-left"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu class="menubody" side="left">
+        <ion-content>
+            <div class="list menu-list">
+                <a class="item menuHeader" nav-clear menu-close href="#/app/view-parent-home">
+                    <img src="Paatashala.png" class="paatashalaImg" />
+                    <p class="current-user">{{menu.user.name}}</p>
+                    <p>{{menu.user.type}}</p>
+                </a>
+                <a class="item item-icon-left menu-item" nav-clear menu-close href="#/appemp/view-Employee-home">
+                    <i class="icon ion-android-home"></i>
+                    Home
+                </a>
+                <a class="item item-icon-left menu-item" nav-clear menu-close href="#/appemp/EmployeeSettings">
+                    <i class="icon ion-android-settings"></i>
+                    Settings
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+<style>
+    .menubody {
+        background-color: #313854;
+    }
+
+    .paatashalaImg {
+        width: 35%;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+
+    .menuHeader {
+        text-align: center;
+        background-image: url('login-bk.jpg');
+        background-size: cover;
+    }
+
+    .current-user {
+        font-size: larger!important;
+        color: #ceea40!important;
+        padding-top: 15px!important;
+        padding-bottom:5px;
+    }
+    a.menu-item{
+        background-color:#313854;
+        color:white;
+    }
+</style>

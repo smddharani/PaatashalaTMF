@@ -1,0 +1,31 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Student Attendance</div>
+    </ion-nav-title>
+    <ion-content>
+        <ion-item>
+             <label class="item item-input">
+                <input type="text" ng-model="FormattedDate" placeholder="Date" ng-click="setDateTime()">
+            </label>
+         </ion-item>
+        
+                <label class="item item-input item-select" style="margin-top: 14px;">
+            <label class="input-label">
+                Batch
+            </label>
+            <select ng-model="selected.Batch" ng-options="r.Id as r.Name for r in Batchlist"></select>
+        </label>
+        <label class="item item-input item-select" style="margin-top: 14px;">
+            <label class="input-label">
+                Course
+            </label>
+            <select ng-model="selected.Course" ng-options="r.Id as r.Name for r in CourseList"></select>
+        </label>
+        <br />
+        <br />
+         <button class="button button-block button-positive"  ng-click="GiveAttendanceList()">
+                Next
+            </button>
+    </ion-content>
+</ion-view>

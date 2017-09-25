@@ -1,0 +1,83 @@
+﻿.l-header {
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+    .l-header.notactive {
+        background-color: #acdae7;
+        color: black;
+    }
+
+.l-container {
+    font-size: medium;
+    width: 80%;
+    left: 10%;
+    position: relative;
+    background-color: #25aae1;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bk {
+    background-image: url('../login-bk.jpg');
+}
+
+.l-row {
+    padding: 0;
+}
+
+.l-form {
+    padding: 10px;
+}
+
+.l-header.parent-header.notactive {
+    box-shadow: rgba(173, 173, 173, 0.59) -3px -3px 3px inset;
+}
+
+.l-header.emp-header.notactive {
+    box-shadow: rgba(173, 173, 173, 0.59) 3px -3px 3px inset;
+}
+
+.l-button {
+    border-color: #25aae1;
+    background-color: #0f75bc;
+    color: #fff;
+    padding: 9px;
+    width: 49%;
+    border: none;
+}
+
+    .l-button.secondary {
+        background-color: rgb(125, 125, 125);
+    }
+
+    .l-button.full {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .l-button:active {
+        background-color: #25aae1;
+    }
+
+.bottom-logo-container {
+    text-align: center;
+    width: 100%;
+    margin-top : 40px;
+}
+
+    .bottom-logo-container img {
+        width: 40%;
+        display: inline-block;
+    }
+
+    .bottom-logo-container h4 {
+        display: inline-block;
+        vertical-align: bottom;
+        font-size: medium;
+        color: #126837;
+    }

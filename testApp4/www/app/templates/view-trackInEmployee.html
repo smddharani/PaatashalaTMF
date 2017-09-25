@@ -1,0 +1,36 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Track Bus-Route</div>
+    </ion-nav-title>
+
+    <ion-content class="padding">
+        <div id="map" data-tap-disabled="true"></div>
+        <label class="item item-input item-select">
+            <label class="input-label">
+                RouteCode
+            </label>
+            <select ng-model="data.code" ng-options="r.Id as r.RouteCode for r in RouteCode.Routes"></select>
+        </label>
+        <!--<button class="button button-block button-positive"
+                ng-click="getRouteLocation()">
+            Get Route Location
+        </button>-->
+        <div>
+            <p>
+                {{time.refreshMessage}}
+            </p>
+        </div>
+    </ion-content>
+</ion-view>
+
+<style>
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+    .scroll {
+        height: 80%;
+    }
+</style>                           

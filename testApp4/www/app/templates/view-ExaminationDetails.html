@@ -1,0 +1,39 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Examination Details</div>
+    </ion-nav-title>
+
+   
+    <ion-content style="margin-top: 5px;   margin-bottom: 48px;">
+        <div class="list">
+            <div class="item" href="#" ng-repeat="s in examinationDetail.ExamDetails">
+                <div class="row">
+                    <div class="col col-60">
+                        Date : <b>{{s.Date | date: "yyyy-MM-dd"}}</b>
+                    </div>
+                    <div class="col">
+                        <b>{{s.Name}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Time : <b>{{s.Starttime | limitTo:5}}</b>
+                    </div>
+                    <div class="col">
+                        <b>{{s.SubjectName}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Duration : <b>{{s.Duration | limitTo:5}}</b>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

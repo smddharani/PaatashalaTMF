@@ -1,0 +1,30 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Settings</div>
+    </ion-nav-title>
+    <ion-content class="padding has-header">
+        <div style="text-align:center">
+            <img src="Paatashala.png" style="width:60%;"/>
+        </div>
+        <div class="list">
+            <div class="item item-icon-left">
+                <i class="icon ion-social-octocat"></i>
+                <strong>App Version : </strong>{{AppCurrentVersion}}
+            </div>
+            <a class="item item-icon-left" ng-click="checkForUpdate()">
+                <i class="icon ion-android-happy"></i>
+                Check for update
+            </a>
+            <!--<a class="item item-icon-left" href="#/debug">
+                <i class="icon ion-bug"></i>
+                Debug
+            </a>-->
+
+        </div>
+        <button class="button button-block button-assertive" ng-click="logout()">
+            Logout
+        </button>
+    </ion-content>
+</ion-view>

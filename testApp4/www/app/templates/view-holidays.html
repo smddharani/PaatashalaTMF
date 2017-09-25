@@ -1,0 +1,35 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline"> Holidays Details</div>
+    </ion-nav-title>
+    <ion-content>
+        <div class="card" ng-if="noHolidays" style="text-align: center;font-style: italic;">
+            <div class="item item-text-wrap">
+                No holidays listed
+            </div>
+        </div>
+        <div class="list">
+            <div ng-repeat="month in HolidayDetail track by $index" ng-if="month">
+                <div class="item item-divider eh-item-divider">
+                    {{month.MonthName}}
+                </div>
+                <a class="item eh-item" href="#" ng-repeat="day in month.List | orderBy : 'Date':false">
+                    <div class="row">
+                        <div class="col col-33">{{ day.Date| date: "dd MMM yyyy"}} :</div>
+                        <div class="col col-66 item-text-wrap">{{day.Name}}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    .eh-item {
+        padding: 1px 14px !important;
+    }
+
+    .eh-item-divider {
+        background-color: #adccff !important;
+    }
+</style>

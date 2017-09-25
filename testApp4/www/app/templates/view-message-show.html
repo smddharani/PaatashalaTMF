@@ -1,0 +1,44 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Message</div>
+    </ion-nav-title>
+
+    <div class="bar bar-header bar-positive">
+        <h1 class="title"><strong> Message Box</strong></h1>
+    </div>
+    <ion-content>
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon ion-arrow-swap"></i>
+                Message Details
+            </div>
+            <div class="item item-body">
+                <h3>{{data.Contents}}</h3>
+                <p>
+                    <a href="#" class="subdued">{{data.CreatedOn}}</a>
+                </p>
+                <p>
+                    <ion-list ng-show="data.Type == 'OPTION'">
+                        <ion-radio ng-model="data.Response" ng-disabled="data.disabled" ng-repeat="opt in data.Options" ng-value="opt.OptionValue">{{opt.OptionValue}}</ion-radio>
+                    </ion-list>
+                    <ion-list ng-show="data.Type == 'BOOLEAN'">
+                        <ion-radio ng-model="data.Response" ng-disabled="data.disabled" ng-value="'Yes'">Yes</ion-radio>
+                        <ion-radio ng-model="data.Response" ng-disabled="data.disabled" ng-value="'No'">No</ion-radio>
+                    </ion-list>
+                    <label class="item item-input" ng-show="data.Type == 'STRING'">
+                        <textarea ng-disabled="data.disabled" rows="8" ng-model="data.Response" placeholder="Response (Max: 200 chars)"></textarea>
+                    </label>
+                    <div class="list list-inset" ng-show="data.Type == 'INTEGER'">
+                        <label class="item item-input">
+                            <input ng-disabled="data.disabled" style="background-color: #f1f1f1;" ng-model="data.Response" type="text">
+                        </label>
+                    </div>
+                </p>
+                <button class="button icon-right ion-android-send button-positive" 
+                        ng-if="!!data.Type && data.Type != 'NONE'"
+                        ng-click="submitResponse()" ng-disabled="data.disabled">Submit Response</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

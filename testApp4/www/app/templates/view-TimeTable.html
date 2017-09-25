@@ -1,0 +1,49 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">  TimeTable Details</div>
+    </ion-nav-title>
+
+    <ion-content class="has-header padding" scroll="false">
+
+        <div class="card" ng-if="!periodData.WeekdayTimeTables">
+            <div class="item item-text-wrap" style="text-align:center">
+                Time Table not available
+            </div>
+        </div>
+
+        <tab-slide-box ng-if="periodData.WeekdayTimeTables">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <a href="javascript:;" ng-repeat="pd in periodData.WeekdayTimeTables" on-finish-render="test()">{{pd.Name}}</a>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide ng-repeat="i in [0,1,2,3,4,5,6]">
+                    <table class="table-fill" ng-if="periodData.WeekdayTimeTables[i].Periods.length != 0">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Time</th>
+                                <th class="text-left">Subject</th>
+                                <th class="text-left">Faculty</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr ng-repeat="p in periodData.WeekdayTimeTables[i].Periods">
+                                <td class="text-left">{{p.StartTime | date:"HH:mm a"}}-{{p.EndTime | date:"HH:mm a"}}</td>
+                                <td class="text-left">{{p.Subject.Name}}</td>
+                                <td class="text-left">{{p.FacultyName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 ng-if="periodData.WeekdayTimeTables[i].Periods.length == 0">No Periods on this day</h2>
+                </ion-slide>
+            </ion-slide-box>
+        </tab-slide-box>
+
+      
+    </ion-content>
+</ion-view>
+<link href="../../css/custom-table.css" rel="stylesheet" />

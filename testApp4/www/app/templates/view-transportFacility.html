@@ -1,0 +1,26 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">  Transport Details</div>
+    </ion-nav-title>
+    <ion-content style="margin-top: 44px;   margin-bottom: 48px;">
+        <div class="row" >
+            <div class="col" style="font-size:18px;">Pickup Time</div>
+            <div class="col" style="padding-right:9px;"><input type="datetime-local" style="margin-right: -53px; height: 31px;  width: 191px;" ng-model="TransportDetail.PickupTime" disabled /></div>
+        </div>
+        <div class="row">
+            <div class="col" style="font-size:18px;">Drop Time</div>
+            <div class="col" style="padding-right:9px;"><input type="datetime-local" style="margin-right: -53px; height: 31px;  width: 191px;" ng-model="TransportDetail.DropTime" disabled /></div>
+        </div>
+        <div class="row">
+            <div class="col" style="font-size:18px;">Starting Point</div>
+            <div class="col" style="padding-right:9px;">{{TransportDetail.Transport.StopName}}</div>
+        </div>
+        <div class="row">
+            <div class="col" style="font-size:18px;">Ending Point</div>
+            <div class="col" style="padding-right:9px;"> {{TransportDetail.Transport.Endpoint}}</div>
+        </div>
+      
+    </ion-content>
+</ion-view>

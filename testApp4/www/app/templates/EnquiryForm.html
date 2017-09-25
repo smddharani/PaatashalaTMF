@@ -1,0 +1,185 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Enquiry Form</div>
+    </ion-nav-title>
+    <ion-content>
+        <form name="studentform" novalidate>
+            <div class="list">
+                <div class="item item-divider">
+                    <strong>  Student Info</strong>
+                </div>
+                <div class="row">
+                    <a class="col">
+                        <label class="item item-input">
+                            <input name="firstname" type="text" placeholder="First Name" ng-model="data.FirstName" required>
+                            <span ng-show="studentform.firstname.$error.required" style="color:red">*</span>
+                        </label>
+                    </a>
+                    <a class="col">
+                        <label class="item item-input">
+                            <input type="text" placeholder="Last Name" ng-model="data.LastName">
+                        </label>
+                    </a>
+                </div>
+                <div>
+                    <label class="item item-input">
+                        <span> <label>D O B : &nbsp;</label>  </span>
+                        <input type="text" ng-model="data.DateOfBirth" placeholder="Date" ng-click="setDateTime()">
+                    </label>
+                </div>
+                <br />
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Gender
+                        </div>
+                        <select ng-model="data.Sex" ng-change="dropvalueChange()" ng-init="dropdown.value='--Select--'">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label class="item item-input">
+                        <textarea placeholder="Address" ng-model="data.CurrentAddress"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="item item-divider">
+                <strong>  Parents Info</strong>
+            </div>
+            <div class="row">
+                <a class="col">
+                    <label class="item item-input">
+                        <input name="fathername" type="text" placeholder="Father's Name" ng-model="data.FatherName" required>
+                        <span ng-show="studentform.fathername.$error.required" style="color:red">*</span>
+                    </label>
+                </a>
+                <a class="col">
+                    <label class="item item-input">
+                        <input name="mothername" type="text" placeholder="Mother's Name" ng-model="data.MotherName" required>
+                        <span ng-show="studentform.mothername.$error.required" style="color:red">*</span>
+                    </label>
+                </a>
+            </div>
+            <div class="row">
+                <a class="col">
+                    <label class="item item-input">
+                        <input name="phone" type="text" placeholder="Contact" ng-model="data.FatherContactNo" required>
+                        <span ng-show="studentform.phone.$error.required" style="color:red">*</span>
+                    </label>
+                </a>
+                <a class="col">
+                    <label class="item item-input">
+                        <input name="phone1" type="text" placeholder="Contact" ng-model="data.MotherContactNo" required>
+                        <span ng-show="studentform.phone1.$error.required" style="color:red">*</span>
+                    </label>
+                </a>
+            </div>
+            <div class="row">
+                <a class="col">
+                    <label class="item item-input">
+                        <input type="email" placeholder="Email-id" ng-model="data.FatherEmail">
+                    </label>
+                </a>
+                <a class="col">
+                    <label class="item item-input">
+                        <input type="email" placeholder="Email-id" ng-model="data.MotherEmail">
+                    </label>
+                </a>
+            </div>
+            <div class="item item-divider">
+                <strong>Academic Details</strong>
+            </div>
+            <!--<div class="row">-->
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Stream
+                        <span ng-show="studentform.Stream.$error.required" style="color:red">*</span>
+                    </label>
+                    <select name="Stream" ng-model="reg.Stream" ng-options="r.Id as r.Name for r in Streamlist" required></select>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Batch
+                        <span ng-show="studentform.Batch.$error.required" style="color:red">*</span>
+                    </label>
+                    <select name="Batch" ng-model="reg.Batch" ng-options="r.Id as r.Name for r in Batchlist" required></select>
+                </label>
+            </div>
+            <!--</div>-->
+            <!--<div class="row">-->
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Course
+                        <span ng-show="studentform.Course.$error.required" style="color:red">*</span>
+                    </label>
+                    <select name="Course" ng-model="reg.Course" ng-options="r.Id as r.Name for r in CourseList" required></select>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Other Programs
+                    </label>
+                    <select ng-model="reg.OtherPrograms" ng-options="r.Id as r.Name for r in OtherProgramList"></select>
+                </label>
+            </div>
+            <!--</div>-->
+            <br />
+            <div class="item item-divider">
+                <strong>Lead Details</strong>
+            </div>
+
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Channel
+                        <span ng-show="studentform.Channel.$error.required" style="color:red">*</span>
+
+                    </div>
+                    <select name="Channel" ng-model="lead.Channel" ng-change="dropvalueChange()" ng-init="dropdown.value='--Select--'" required>
+                        <!--<option value="--Select--" selected>--Select--</option>-->
+                        <option value="Telephone">Telephone</option>
+                        <option value="Reference">Reference</option>
+                        <option value="Direct">Direct</option>
+                        <option value="Ads">Ads</option>
+                        <option value="On-Line">On-Line</option>
+                        <option value="News Paper Add">News Paper Add</option>>
+                    </select>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input">
+                    <span> <label> FollowUp Date: &nbsp;</label>  </span>
+                    <!--<p> FollowUp Date :&nbsp; </p>-->
+                    <input type="text" ng-model="lead.FollowupTime" placeholder="Date" ng-click="setDateTime1()">
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Admission status
+                    </label>
+                    <select ng-model="reg.AdmissionStatus" ng-options="r.Id as r.Name for r in AdmissionStatuslist"></select>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input item-select" style="margin-top: 14px;">
+                    <label class="input-label">
+                        Assign to
+                    </label>
+                    <select ng-model="lead.AssignTo" ng-options="r.Id as r.Name for r in EmployeeList"></select>
+                </label>
+            </div>
+            <button class="button button-block button-positive" ng-disabled="studentform.$invalid" ng-click="LeadFormsubmit(data,reg,lead)">
+                Submit
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

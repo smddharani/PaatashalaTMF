@@ -1,0 +1,19 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Diary Report</div>
+    </ion-nav-title>
+    <ion-content>
+        <div class="card"  ng-repeat="d in Diary.studentDiary">
+                <div class="item item-divider">
+                   <strong>Title: </strong>{{d.Title}}
+                </div>
+                <div class="item item-text-wrap">
+                 {{d.Comments}} 
+                </div>
+                <div class="item item-divider">
+                   {{d.Date |date: 'yyyy-MM-dd' }}
+                </div>
+         </div>
+</ion-content>
+</ion-view>

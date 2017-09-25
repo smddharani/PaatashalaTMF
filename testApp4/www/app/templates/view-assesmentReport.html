@@ -1,0 +1,29 @@
+﻿<ion-view>
+
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Assesment Report</div>
+    </ion-nav-title>
+
+        <div ng-repeat="(examType, report) in assesmentDetails">
+            <div class="table-title">
+                <strong>{{examType}}</strong>
+            </div>
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-left">Subject</th>
+                        <th class="text-left">Marks</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
+                    <tr ng-repeat="s in report">
+                        <td class="text-left">{{ s.SubjectName}}</td>
+                        <td class="text-left">{{s.Marks}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ion-content>
+</ion-view>
+<link href="../../css/custom-table.css" rel="stylesheet" />

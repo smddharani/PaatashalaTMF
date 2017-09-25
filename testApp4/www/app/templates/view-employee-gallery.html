@@ -1,0 +1,23 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Gallery</div>
+    </ion-nav-title>
+   
+    <ion-content class="padding">
+        <label class="item item-input item-select">
+            <label class="input-label">
+                Batch
+            </label>
+            <select ng-model="selected.Batch" ng-options="r.Id as r.Name for r in Batchlist"></select>
+        </label>
+        <label class="item item-input item-select">
+            <label class="input-label">
+                Course
+            </label>
+            <select ng-model="selected.Course" ng-options="r.Id as r.Name for r in CourseList"></select>
+        </label>
+        <button class="button button-positive button-block" ng-click="addNewImage()">Add Image</button>
+        <button class="button button-positive button-block" ng-click="showGallery()">Show Gallery</button>
+    </ion-content>
+</ion-view>

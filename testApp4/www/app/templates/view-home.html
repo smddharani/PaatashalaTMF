@@ -1,0 +1,72 @@
+﻿<ion-view >
+    <ion-content> 
+        <img src="../../images/Parent-teacher-Conference.jpg" class="sr-logo" />
+       
+        <ion-list>
+        
+            <ion-item item="item" style="top: -6px;">
+                
+                <!--<label class="item item-input">
+                    <input type="text" placeholder="First Name" ng-model="data.username" >
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Last Name" ng-model="data.pwd">
+
+                </label>
+                <div>
+                    <button class="button button-block" ng-click="goAfterLogin(data)" >Login</button>
+                </div>-->
+              
+                <ion-radio ng-model="radio" ng-value="'Mobile'" style="width:138px;background-color:darkgrey;">Mobile</ion-radio>
+                <ion-radio ng-model="radio" ng-value="'Email'" style="position: relative; width: 157px;top:-55px;height:46px;padding: -2px;left:173px;">Email</ion-radio>                   
+                <div class="list" >
+                     <form name="loginForm"  style="margin-top: -56px;">  
+                    <label class="item item-input" id="label1">
+                        <input type="text" style="color:dodgerblue;"placeholder="Email Or Phonemunber" id="unme"  ng-model="data.username" required>
+                        <span style="color:red;" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
+                            <span ng-show="loginForm.username.$error.required">UserName is Invalid</span>
+                        </span>
+                        
+                    </label>
+                    <label class="item item-input">
+                        <input  style="color:dodgerblue;" placeholder="Password" type="password" ng-model="data.password" required>
+                        <span style="color:red;" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+                       <span ng-show="loginForm.password.$error.required"> Password is Invalid.</span>
+                    </span>
+                        
+                            </label>
+                        
+                    <button class="button button-block button-positive"style="width: 187px;border-radius: 15px;position: relative;left: 80px;top: 10px;" ng-disabled="loginForm.username.$dirty && loginForm.username.$invalid || loginForm.password.$dirty && loginForm.password.$invalid" ng-click="goAfterLogin(data)">
+                        login
+                    </button>
+                         
+                    <button class="button button-block button-positive" style="width: 187px;border-radius: 15px;position: relative;left: 80px;top: 7px;background-color: green;" ng-click="goRegister()">
+                        Register
+                    </button>
+                    <!--<button class="button button-block button-positive" style="width: 187px;border-radius:15px;position: relative;left: 80px;top: 4px; background-color: #CC4848;">
+                        Forget Password
+                    </button>-->
+                         <a style="position: relative;left:111px;top: 4px;color: red;" href="#" ng-click="forgotPass()" >Forgot Password</a>
+                         <a style="position: relative;left:111px;top: 4px;color: red;" href="#" ng-click="parentHome()">parentHome</a>
+                    </form>                         
+                 </div>
+              </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<style type="text/css">
+    .sr-logo {
+    width: 84%;
+    top: 5px;
+    left: 50px;
+    }
+.item item-input{
+    width:100%;
+}
+.item item-input{
+top: -15px;
+ width: 110%;
+ left: -14px;
+}
+
+</style>

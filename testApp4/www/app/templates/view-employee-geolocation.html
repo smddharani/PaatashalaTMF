@@ -1,0 +1,35 @@
+﻿<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Location Update</div>
+    </ion-nav-title>
+    <ion-content class="padding">
+        <div>
+            <label class="item item-input item-select">
+                <label class="input-label">
+                    RouteCode
+                </label>
+                <select ng-model="data.code"  ng-options="r.Id as r.RouteCode for r in RouteCode.Routes">
+                  
+                </select>
+            </label>
+            <!--<button class="button button-block button-positive" ng-click="StartUpdateLocation()">
+                {{Button.Text}}
+            </button>--> 
+            <ul class="list">
+                <li class="item item-toggle">
+                    Location Update
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="Button.LocationUpdate" ng-change="StartUpdateLocation()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+            <!--<p>{{GL}}</p>-->
+        </div>
+        
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,20 @@
+﻿
+
+<ion-view>
+    <ion-nav-title>
+        <img src="Paatashala.png" style="height:100%;">
+        <div style="vertical-align: top;display:inline">Personal Details</div>
+    </ion-nav-title>
+    <ion-content>
+        <div class="card">
+            <div class="item item-image">
+                <img src="{{imageUrl}}" onerror="this.src='babyphoto.jpg';" />
+            </div>
+            <div class="item item-text-wrap">
+                <p>Name : <b>{{Details.Data.Name}}</b></p>
+                <p>Designation : <b>{{Details.Data.Designation}}</b></p>
+                <p>Employee Id : <b>{{Details.Data.EmpId}}</b></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
